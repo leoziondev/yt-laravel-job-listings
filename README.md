@@ -7,6 +7,29 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+# Job Listing Portal
+Study project of a job listing portal developed in Laravel 9, TailwindCSS and AlpineJS
+
+__Topics covered in this project__
+- Setup
+- Routing
+- Eloquent Models
+- Relationships
+- Factory and Seeders
+- Blade Templates
+- Components
+- Component Attributes
+- CRUD
+- Scope Filtering
+- File Upload
+- Pagination
+- Flash Messages
+- Validation
+- Authentication
+- Authorization
+- Middleware
+- and Much more ...
+
 ## References
 
 - [Laravel From Scratch 2022 | 4+ Hour Course by Brad Traversy](https://www.youtube.com/watch?v=MYyJ4PuL4pY&t=1477s)
@@ -22,5 +45,5 @@ Init Tailwind
 ```
 yarn tailwindcss init
 ```
-[More about installation Tailwindcss in Laravel](https://tailwindcss.com/docs/guides/laravel)
+[More about installation and config Tailwindcss in Laravel](https://tailwindcss.com/docs/guides/laravel)
 
