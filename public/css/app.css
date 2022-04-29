@@ -601,6 +601,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .gap-4 {
   gap: 1rem;
 }
+.gap-6 {
+  gap: 1.5rem;
+}
 .space-x-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.5rem * var(--tw-space-x-reverse));
@@ -642,6 +645,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .border-l-\[6px\] {
   border-left-width: 6px;
+}
+.border-b-\[6px\] {
+  border-bottom-width: 6px;
 }
 .border-indigo-500 {
   --tw-border-opacity: 1;
@@ -700,6 +706,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .bg-no-repeat {
   background-repeat: no-repeat;
+}
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .p-4 {
   padding: 1rem;
@@ -900,11 +914,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:justify-center {
     justify-content: center;
   }
+
+  .md\:border-none {
+    border-style: none;
+  }
 }
 @media (min-width: 1024px) {
 
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:border-none {
+    border-style: none;
   }
 }
 
