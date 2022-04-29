@@ -23,15 +23,15 @@
                 Lara<span class="text-brand-500">Jobs</span>
             </a>
             <nav>
-                <ul class="flex space-x-6 text-md">
+                <ul class="flex space-x-4 text-sm">
                     <li>
-                        <a href="register.html" class="hover:text-brand-500"
-                            ><i class="fa-solid fa-user-plus"></i> Register</a
+                        <a href="register.html" class="text-gray-700 hover:text-brand-500 font-semibold"
+                            ><i class="fa-solid fa-user-plus fa-sm"></i> Register</a
                         >
                     </li>
                     <li>
-                        <a href="login.html" class="hover:text-brand-500"
-                            ><i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        <a href="login.html" class="text-gray-700 hover:text-brand-500 font-semibold"
+                            ><i class="fa-solid fa-arrow-right-to-bracket  fa-sm"></i>
                             Login</a
                         >
                     </li>
@@ -39,9 +39,24 @@
             </nav>
         </div>
     </header>
-    <main>
+    @include('partials._hero')
+    @include('partials._search')
+
+    <main class="mb-32">
         @yield('content')
     </main>
+
+    <footer
+        class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-gray-900 text-white h-24 mt-24 opacity-90 md:justify-center"
+    >
+        <p class="ml-2">Copyright &copy; 2022, All Rights reserved</p>
+
+        <a
+            href="create.html"
+            class="absolute top-1/3 right-10 bg-indigo-500 text-white rounded-md py-2 px-5"
+            >Post Job</a
+        >
+    </footer>
 
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
