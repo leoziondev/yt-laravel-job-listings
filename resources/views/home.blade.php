@@ -1,11 +1,12 @@
-@extends('layouts.app')
+<x-layouts.app>
+    @include('partials._hero')
+    @include('partials._search')
 
-@section('content')
-    <div class="max-w-7xl mx-auto py-4 px-2">
+    <x-ui.container>
         @if ($listings->count())
             <div class="flex justify-between items-center mt-4 mb-8">
                 <h1 class="text-2xl font-bold text-gray-700">Latest jobs posted</h1>
-                <a href="#" class="text-xs text-gray-500 hover:text-brand-500 font-semibold uppercase">
+                <a href="{{ route('listings.index') }}" class="text-xs text-gray-500 hover:text-brand-500 font-semibold uppercase">
                     List all jobs
                     <i class="fa-solid fa-arrow-right-long ml-1"></i>
                 </a>
@@ -27,5 +28,5 @@
             </div>
 
         @endif
-    </div>
-@endsection
+    </x-ui.container>
+</x-layouts.app>
