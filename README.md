@@ -45,5 +45,22 @@ Init Tailwind
 ```
 yarn tailwindcss init
 ```
-[More about installation and config Tailwindcss in Laravel](https://tailwindcss.com/docs/guides/laravel)
 
+Tailwind Typography Plugin
+```
+yarn add -D @tailwindcss/typography
+```
+
+Tailwind Line Clamp Plugin
+```
+yarn add -D @tailwindcss/line-clamp
+```
+
+
+## Documentation
+
+- [Laravel 9](https://laravel.com/docs/9.x)
+- [Tailwindcss](https://tailwindcss.com/docs)
+- [More about installation and config Tailwindcss in Laravel](https://tailwindcss.com/docs/guides/laravel)
+- [More about installation and config Typography Plugin](https://tailwindcss.com/docs/typography-plugin)
+- [More about installation and config Line Clamp Plugin](https://github.com/tailwindlabs/tailwindcss-line-clamp)
