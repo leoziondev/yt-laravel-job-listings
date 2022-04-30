@@ -22,7 +22,11 @@
                         type="text"
                         class="border border-gray-200 rounded p-2 w-full"
                         name="company"
+                        value="{{ old('company') }}"
                     />
+                    @error('company')
+                        <p class="text-red-500 text-xs italic mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
 
                 <div class="mb-6">
@@ -37,7 +41,11 @@
                         class="border border-gray-200 rounded p-2 w-full"
                         name="title"
                         placeholder="Example: Senior Laravel Developer"
+                        value="{{ old('title') }}"
                     />
+                    @error('title')
+                        <p class="text-red-500 text-xs italic mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
 
                 <div class="mb-6">
@@ -51,8 +59,12 @@
                         type="text"
                         class="border border-gray-200 rounded p-2 w-full"
                         name="location"
+                        value="{{ old('location') }}"
                         placeholder="Example: Remote, Boston MA, etc"
                     />
+                    @error('location')
+                        <p class="text-red-500 text-xs italic mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
 
                 <div class="mb-6">
@@ -66,7 +78,11 @@
                         type="text"
                         class="border border-gray-200 rounded p-2 w-full"
                         name="email"
+                        value="{{ old('email') }}"
                     />
+                    @error('email')
+                        <p class="text-red-500 text-xs italic mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
 
                 <div class="mb-6">
@@ -80,7 +96,11 @@
                         type="text"
                         class="border border-gray-200 rounded p-2 w-full"
                         name="website"
+                        value="{{ old('website') }}"
                     />
+                    @error('website')
+                        <p class="text-red-500 text-xs italic mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
 
                 <div class="mb-6">
@@ -94,8 +114,12 @@
                         type="text"
                         class="border border-gray-200 rounded p-2 w-full"
                         name="tags"
+                        value="{{ old('tags') }}"
                         placeholder="Example: Laravel, Backend, Postgres, etc"
                     />
+                    @error('tags')
+                        <p class="text-red-500 text-xs italic mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
 
                 {{-- <div class="mb-6">
@@ -124,7 +148,10 @@
                         name="description"
                         rows="10"
                         placeholder="Include tasks, requirements, salary, etc"
-                    ></textarea>
+                    >{{ old('description') }}</textarea>
+                    @error('description')
+                        <p class="text-red-500 text-xs italic mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
 
                 <div class="mb-6">
