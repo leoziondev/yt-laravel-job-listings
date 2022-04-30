@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $listings = Listing::latest()->limit(6)->get();
+        $listings = Listing::latest()->filter(request(['tag']))->limit(6)->get();
 
         return view("home", compact('listings'));
     }
