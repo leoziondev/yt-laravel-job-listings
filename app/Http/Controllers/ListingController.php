@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreListingFormRequest;
 use App\Models\Listing;
 use Illuminate\Http\Request;
 
@@ -18,19 +19,19 @@ class ListingController extends Controller
     // Show single listing
     public function show(Listing $listing)
     {
-
-
         return view('listings.show', compact('listing'));
     }
 
     public function create()
     {
-
         return view('listings.create');
     }
 
-    public function store(Request $request)
+    public function store(StoreListingFormRequest $request)
     {
-        dd($request->all());
+        $data = $request->validated();
+        Listing::create($data);
+
+        return redirect('/');
     }
 }
