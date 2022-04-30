@@ -1,4 +1,4 @@
-<form action="" class="mx-4">
+<form action="" class="w-full mx-4">
     <x-ui.container class="py-0 px-0">
         <div class="relative border-2 border-white bg-white rounded-md shadow">
             <div class="absolute top-4 left-3">
