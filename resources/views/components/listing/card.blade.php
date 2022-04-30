@@ -8,8 +8,8 @@
             alt="{{ $listing->company }}"
         />
         <div>
-            <h2 class="text-xl text-gray-800 font-bold">
-                <a href="show.html">{{ $listing->title }}</a>
+            <h2 class="text-xl text-gray-800 font-bold line-clamp-2">
+                <a href="{{ route('listings.show', $listing->id) }}">{{ $listing->title }}</a>
             </h2>
             <div class="text-md text-gray-600 font-bold mb-4">
                 {{ $listing->company }}
