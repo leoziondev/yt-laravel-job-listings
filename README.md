@@ -56,6 +56,12 @@ Tailwind Line Clamp Plugin
 yarn add -D @tailwindcss/line-clamp
 ```
 
+Clockwork
+```
+composer require itsgoingd/clockwork
+```
+[Add clockwork chrome extension](https://chrome.google.com/webstore/detail/clockwork/dmggabnehkmmfmdffgajcflpdjlnoemp)
+
 
 ## Documentation
 
