@@ -32,6 +32,6 @@ class ListingController extends Controller
         $data = $request->validated();
         Listing::create($data);
 
-        return redirect('/');
+        return redirect('/')->with('message', 'Listing created successfully!');
     }
 }
