@@ -60,7 +60,13 @@ Clockwork
 ```
 composer require itsgoingd/clockwork
 ```
+
 [Add clockwork chrome extension](https://chrome.google.com/webstore/detail/clockwork/dmggabnehkmmfmdffgajcflpdjlnoemp)
+
+Publish Pagination vendor in resources
+```
+php artisan vendor:publish --tag=laravel-pagination
+```
 
 
 ## Documentation

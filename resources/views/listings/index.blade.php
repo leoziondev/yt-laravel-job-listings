@@ -46,7 +46,7 @@
                 @endif
 
                 <div class="mt-8">
-                    {{ $listings->onEachSide(5)->links() }}
+                    {{ $listings->links() }}
                 </div>
             </div>
         </div>
