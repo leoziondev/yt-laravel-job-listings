@@ -8,7 +8,7 @@
                 <p class="mb-4 text-gray-600">Post a job to find a developer</p>
             </header>
 
-            <form action="{{ route('listings.store') }}" method="POST">
+            <form action="{{ route('listings.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="mb-6">
@@ -122,7 +122,7 @@
                     @enderror
                 </div>
 
-                {{-- <div class="mb-6">
+                <div class="mb-6">
                     <label
                         for="logo"
                         class="inline-block text-sm text-gray-700 font-semibold mb-2"
@@ -134,7 +134,10 @@
                         class="border border-gray-200 rounded p-2 w-full"
                         name="logo"
                     />
-                </div> --}}
+                    @error('logo')
+                        <p class="text-red-500 text-xs italic mt-1">{{ $message }}</p>
+                    @enderror
+                </div>
 
                 <div class="mb-6">
                     <label
