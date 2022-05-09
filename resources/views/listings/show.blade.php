@@ -41,13 +41,22 @@
             </div>
             <div class="w-full md:w-8/12 mt-6 md:mt-0">
                 <x-ui.card class="relative">
-                    <div class="absolute top-5 right-5">
+                    <div class="flex space-x-3 absolute top-5 right-5">
                         <a
                             href="{{ route('listings.edit', $listing->id) }}"
                             class="bg-gray-50 text-gray-400 transition-all hover:bg-brand-100 hover:text-brand-500 py-1 px-2 rounded-md shadow"
                         >
                             <i class="fa-solid fa-pen-to-square"></i>
                         </a>
+
+                        <form action="{{ route('listings.destroy', $listing->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+
+                            <button type="submit" class="bg-gray-50 text-gray-400 transition-all hover:bg-red-100 hover:text-red-500 py-1 px-2 rounded-md shadow">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </form>
                     </div>
                     <h1 class="text-2xl font-bold text-gray-800 mb-2">{{ $listing->title }}</h1>
 
