@@ -35,6 +35,8 @@ class ListingController extends Controller
             $data['logo'] = $request->file('logo')->store('logos', 'public');
         }
 
+        $data['user_id'] = auth()->id();
+
         Listing::create($data);
 
         return redirect('/')->with('message', 'Listing created successfully!');
@@ -71,5 +73,13 @@ class ListingController extends Controller
         $listing->delete();
 
         return redirect('/listings')->with('message', 'Listing deleted successfully!');
+    }
+
+    public function manage()
+    {
+        // dd(auth()->user()->listings()->get());
+        return view('listings.manage', [
+            'listings' => auth()->user()->listings()->get(),
+        ]);
     }
 }

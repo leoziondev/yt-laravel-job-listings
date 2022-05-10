@@ -14,6 +14,7 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/listings/{listing}/edit', [ListingController::class, 'edit'])->name('listings.edit');
     Route::put('/listings/{listing}', [ListingController::class, 'update'])->name('listings.update');
     Route::delete('/listings/{listing}', [ListingController::class, 'destroy'])->name('listings.destroy');
+    Route::get('/listings/manage', [ListingController::class, 'manage'])->name('listings.manage');
 });
 
 Route::get('/listings/{listing}', [ListingController::class, 'show'])->name('listings.show');

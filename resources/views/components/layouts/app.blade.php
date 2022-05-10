@@ -31,7 +31,7 @@
                             </span>
                         </li>
                         <li>
-                            <a href="login.html" class="text-gray-700 hover:text-brand-500 font-semibold"
+                            <a href="{{ route('listings.manage') }}" class="text-gray-700 hover:text-brand-500 font-semibold"
                                 ><i class="fa-solid fa-gear fa-sm"></i>
                                 Manage Listings</a
                             >
