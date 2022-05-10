@@ -24,17 +24,41 @@
             </a>
             <nav>
                 <ul class="flex space-x-4 text-sm">
-                    <li>
-                        <a href="register.html" class="text-gray-700 hover:text-brand-500 font-semibold"
-                            ><i class="fa-solid fa-user-plus fa-sm"></i> Register</a
-                        >
-                    </li>
-                    <li>
-                        <a href="login.html" class="text-gray-700 hover:text-brand-500 font-semibold"
-                            ><i class="fa-solid fa-arrow-right-to-bracket  fa-sm"></i>
-                            Login</a
-                        >
-                    </li>
+                    @auth
+                        <li>
+                            <span class="font-bold uppercase text-xs">
+                                Welcome {{ auth()->user()->name }}
+                            </span>
+                        </li>
+                        <li>
+                            <a href="login.html" class="text-gray-700 hover:text-brand-500 font-semibold"
+                                ><i class="fa-solid fa-gear fa-sm"></i>
+                                Manage Listings</a
+                            >
+                        </li>
+                        <li>
+                            <form action="{{ route('users.logout') }}" method="POST" class="inline">
+                                @csrf
+
+                                <button type="submit" class="text-gray-700 hover:text-brand-500 font-semibold">
+                                    <i class="fa-solid fa-arrow-right-to-bracket fa-sm"></i>
+                                    Logout
+                                </button>
+                            </form>
+                        </li>
+                    @else
+                        <li>
+                            <a href="{{ route('users.register') }}" class="text-gray-700 hover:text-brand-500 font-semibold"
+                                ><i class="fa-solid fa-user-plus fa-sm"></i> Register</a
+                            >
+                        </li>
+                        <li>
+                            <a href="{{ route('users.login') }}" class="text-gray-700 hover:text-brand-500 font-semibold"
+                                ><i class="fa-solid fa-arrow-right-to-bracket  fa-sm"></i>
+                                Login</a
+                            >
+                        </li>
+                    @endauth
                 </ul>
             </nav>
         </x-ui.container>
