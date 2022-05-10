@@ -18,6 +18,7 @@ class ListingFactory extends Factory
     {
         return [
             'title'     => $this->faker->sentence(),
+            'user_id'   => rand(1, 10),
             'tags'      => 'laravel, api, backend',
             'company'   => $this->faker->company(),
             'email'   => $this->faker->companyEmail(),
